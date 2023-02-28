@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #e0e0e0;
+  color: #1d1d1d;
+}
+
+.movies {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 100px auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+p {
+  width: 80%;
+  max-width: 1000px;
+  margin: 50px auto 50px auto;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+p span {
+  border: 15px solid #23186b;
+  border-radius: 5px;
+  text-shadow: 10px 10px 10px 10px;
+  background-color: #23186b;
+  color: white;
+}
+
+.movies .movie {
+  text-align: center;
+}
+
+.movies .movie .title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.movies .movie .poster {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+.buttons {
+  position: fixed;
+  bottom: 0;
+  background: #8a110f;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.buttons button {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  background: #cf8804;
+  color: #fff;
+  border-radius: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  transition: 0.3s ease all;
+}
+
+.buttons button:hover {
+  background: #0b6571;
+}
