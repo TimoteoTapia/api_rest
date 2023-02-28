@@ -61,7 +61,6 @@ const uploadMovies = async () => {
     console.log(response);
     if (response.status === 200) {
       movieList = await response.json();
-      console.log(movieList);
       console.log(movieList.results);
       output(movieList.results);
     } else if (response.status === 401) {
