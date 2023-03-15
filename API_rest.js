@@ -54,13 +54,17 @@ const output = (movieList) => {
 //I use fetch to use the API and make a promise, after I store the promise as a list of objects
 //and I display calling output function
 const uploadMovies = async () => {
-  const response = await fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=61540a4590d15548988793305edc821d&page=${pageSite}`
-  );
-  console.log(response);
-  movieList = await response.json();
-  console.log(movieList.results);
-  output(movieList.results);
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/movie/popular?api_key=61540a4590d15548988793305edc821d&page=${pageSite}`
+    );
+    console.log(response);
+    movieList = await response.json();
+    console.log(movieList.results);
+    output(movieList.results);
+  } catch (error) {
+    console.error(`Error: ${error}`);
+  }
 };
 uploadMovies();
 
